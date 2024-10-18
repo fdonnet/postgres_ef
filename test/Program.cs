@@ -26,7 +26,7 @@ if (app.Environment.IsDevelopment())
     var services = scope.ServiceProvider;
 
     var context = services.GetRequiredService<DbContextTest>();
-    //context.Database.EnsureDeleted();
+    context.Database.EnsureDeleted();
     context.Database.EnsureCreated();
 }
 
